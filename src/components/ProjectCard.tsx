@@ -16,7 +16,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           className="w-full h-full object-cover"
         />
         {project.featured && (
-          <span className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+          <span className="absolute top-4 right-4 bg-jackoneal-yellow-600 text-white px-3 py-1 rounded-full text-sm">
             Featured
           </span>
         )}
@@ -24,10 +24,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       {/* Project Content */}
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-blue-900 mb-2">
+        <h3 className="text-xl font-semibold text-jackoneal-yellow-900 mb-2">
           {project.title}
         </h3>
-        <p className="text-blue-600 mb-4 line-clamp-2">
+        <p className="text-jackoneal-yellow-600 mb-4 line-clamp-2">
           {project.description}
         </p>
 
@@ -37,7 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <span
               key={tag}
               data-tag={tag.toLowerCase()}
-              className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm"
+              className="px-3 py-1 bg-jackoneal-yellow-50 text-jackoneal-yellow-600 rounded-full text-sm"
             >
               {tag}
             </span>
@@ -51,7 +51,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"
+              className="flex-1 text-center px-4 py-2 bg-jackoneal-yellow-600 text-white rounded-xl hover:bg-jackoneal-yellow-700 transition-colors"
             >
               Live Demo
             </a>
@@ -61,7 +61,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center px-4 py-2 border border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50 transition-colors"
+              className="flex-1 text-center px-4 py-2 border border-jackoneal-yellow-600 text-jackoneal-yellow-600 rounded-xl hover:bg-jackoneal-yellow-50 transition-colors"
             >
               View Code
             </a>

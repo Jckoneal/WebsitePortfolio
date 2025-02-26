@@ -26,10 +26,10 @@ const testimonials: Testimonial[] = [
 ---
 
 <div class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
-  <h3 class="text-2xl font-semibold text-blue-900 mb-6">What People Say</h3>
+  <h3 class="text-2xl font-semibold text-jackoneal-yellow-900 mb-6">What People Say</h3>
   <div class="grid md:grid-cols-2 gap-6">
     {testimonials.map((testimonial) => (
-      <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl">
+      <div class="bg-gradient-to-br from-jackoneal-yellow-50 to-white p-6 rounded-2xl">
         <div class="flex gap-4 items-start">
           <img 
             src={testimonial.avatar} 
@@ -37,10 +37,10 @@ const testimonials: Testimonial[] = [
             class="w-12 h-12 rounded-full object-cover"
           />
           <div class="flex-1">
-            <p class="text-blue-600/90 mb-4">{testimonial.content}</p>
+            <p class="text-jackoneal-yellow-600/90 mb-4">{testimonial.content}</p>
             <div>
-              <p class="font-medium text-blue-900">{testimonial.author}</p>
-              <p class="text-sm text-blue-600">
+              <p class="font-medium text-jackoneal-yellow-900">{testimonial.author}</p>
+              <p class="text-sm text-jackoneal-yellow-600">
                 {testimonial.role} at {testimonial.company}
               </p>
             </div>

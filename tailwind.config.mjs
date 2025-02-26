@@ -14,6 +14,13 @@ export default {
           300: '#86868b',
           400: '#6e6e73',
           500: '#1d1d1f',
+        },'jackoneal-yellow': {
+          50: '#fdda8a',
+          100: '#fccb5b',
+          200: '#fcc443',
+          300: '#fcbd2c',
+          400: '#FCB615',
+          500: '#FFBE26',
         },
       },
       animation: {

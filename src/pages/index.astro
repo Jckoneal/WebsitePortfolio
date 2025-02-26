@@ -9,12 +9,14 @@ import ContactSection from '../components/ContactSection.astro'
 import BlogWidgets from '../components/BlogWidgets.astro'
 import AchievementsWidget from '../components/AchievementsWidget.astro'
 import TestimonialsWidget from '../components/TestimonialsWidget.astro'
+import Scene3D from '../components/Scene3D';
 ---
 
 <Layout title="Modern Developer Portfolio">
   <main>
+    
     <Hero />
-
+    <Scene3D client:load /> 
     <section class="py-20 px-4">
       <div class="container mx-auto max-w-6xl">
         <div class="mb-8">
@@ -79,3 +81,4 @@ import TestimonialsWidget from '../components/TestimonialsWidget.astro'
     })
   })
 </script>
+
