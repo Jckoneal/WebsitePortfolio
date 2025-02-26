@@ -60,33 +60,33 @@ const Scene3D = () => {
       window.addEventListener('scroll', handleScroll);
     });
   
-    const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
-    const sphereMaterial = new THREE.MeshPhongMaterial({
-      color: 0xFCB615,
-      transparent: true,
-      opacity: 0.8,
-    });
-    const spheres: THREE.Mesh[] = [];
-    for (let i = 0; i < 5; i++) {
-      const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-      sphere.position.set(
-        Math.random() * 15 - 5,
-        Math.random() * 10 - 5,
-        Math.random() * 15 - 15
-      );
-      sphere.scale.setScalar(Math.random() * 0.5 + 0.5);
-      sceneRef.current.add(sphere);
-      spheres.push(sphere);
+    // const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
+    // const sphereMaterial = new THREE.MeshPhongMaterial({
+    //   color: 0xFCB615,
+    //   transparent: true,
+    //   opacity: 0.8,
+    // });
+    // const spheres: THREE.Mesh[] = [];
+    // for (let i = 0; i < 5; i++) {
+    //   const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    //   sphere.position.set(
+    //     Math.random() * 15 - 5,
+    //     Math.random() * 10 - 5,
+    //     Math.random() * 15 - 15
+    //   );
+    //   sphere.scale.setScalar(Math.random() * 0.5 + 0.5);
+    //   sceneRef.current.add(sphere);
+    //   spheres.push(sphere);
 
-      // Animate each sphere
-      gsap.to(sphere.position, {
-        y: `+=${Math.random() * 2 - 1}`,
-        duration: 2 + Math.random() * 2,
-        yoyo: true,
-        repeat: -1,
-        ease: "sine.inOut",
-      });
-    }
+    //   // Animate each sphere
+    //   gsap.to(sphere.position, {
+    //     y: `+=${Math.random() * 2 - 1}`,
+    //     duration: 2 + Math.random() * 2,
+    //     yoyo: true,
+    //     repeat: -1,
+    //     ease: "sine.inOut",
+    //   });
+    // }
 
     // Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
