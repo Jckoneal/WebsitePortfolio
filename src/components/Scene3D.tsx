@@ -41,7 +41,7 @@ const Scene3D = () => {
 
     
     const loader = new GLTFLoader();
-    loader.load('/src/assets/Assembly.gltf', (gltf) => {
+    loader.load('../public/Assembly.gltf', (gltf) => {
       const plane = gltf.scene;
       plane.position.set(planeInitX, planeInitY, planeInitZ);
       plane.rotation.set(planeRotation[0], planeRotation[1], planeRotation[2]);

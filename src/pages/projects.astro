@@ -12,15 +12,15 @@ const allTags = [...new Set(projects.flatMap((project) => project.tags))].sort()
     <div class="container mx-auto max-w-6xl">
       <!-- Header -->
       <div class="text-center mb-12">
-        <a href="/" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4">
+        <a href="/" class="inline-flex items-center text-jackoneal-yellow-600 hover:text-jackoneal-yellow-800 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"
             ></path>
           </svg>
           Back to Home
         </a>
-        <h1 class="text-4xl font-bold text-blue-900 mb-4">My Projects</h1>
-        <p class="text-blue-600 max-w-2xl mx-auto">Explore my latest projects and experiments. Each project represents a unique challenge and solution.</p>
+        <h1 class="text-4xl font-bold text-jackoneal-yellow-900 mb-4">My Projects</h1>
+        <p class="text-jackoneal-yellow-600 max-w-2xl mx-auto">Explore my latest projects and experiments. Each project represents a unique challenge and solution.</p>
       </div>
 
       <!-- Search and Filter Section -->
@@ -33,21 +33,21 @@ const allTags = [...new Set(projects.flatMap((project) => project.tags))].sort()
                 type="text"
                 id="search"
                 placeholder="Search projects..."
-                class="w-full px-4 py-2 rounded-xl bg-white border border-blue-100 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                class="w-full px-4 py-2 rounded-xl bg-white border border-jackoneal-yellow-100 focus:border-jackoneal-yellow-500 focus:ring-2 focus:ring-jackoneal-yellow-200 transition-colors"
               />
             </div>
-            <button id="resetFilters" class="px-4 py-2 text-blue-600 border border-blue-100 rounded-xl hover:bg-blue-50 transition-colors"> Reset Filters </button>
+            <button id="resetFilters" class="px-4 py-2 text-jackoneal-yellow-600 border border-jackoneal-yellow-100 rounded-xl hover:bg-jackoneal-yellow-50 transition-colors"> Reset Filters </button>
           </div>
 
           <!-- Tags Filter -->
           <div class="flex-1">
-            <p class="text-sm text-blue-600 mb-2">Filter by tags:</p>
+            <p class="text-sm text-jackoneal-yellow-600 mb-2">Filter by tags:</p>
             <div class="flex flex-wrap gap-2">
               {
                 allTags.map((tag) => (
                   <label class="inline-flex items-center">
                     <input type="checkbox" value={tag} class="tag-checkbox hidden" />
-                    <span class="px-3 py-1 rounded-full border border-blue-100 text-sm cursor-pointer hover:bg-blue-50 transition-colors tag-label">{tag}</span>
+                    <span class="px-3 py-1 rounded-full border border-jackoneal-yellow-100 text-sm cursor-pointer hover:bg-jackoneal-yellow-50 transition-colors tag-label">{tag}</span>
                   </label>
                 ))
               }
@@ -122,8 +122,8 @@ const allTags = [...new Set(projects.flatMap((project) => project.tags))].sort()
         checkbox.checked = false
         const label = checkbox.nextElementSibling
         if (label) {
-          label.classList.remove('bg-blue-500', 'text-white')
-          label.classList.remove('border-blue-500')
+          label.classList.remove('bg-jackoneal-yellow-500', 'text-white')
+          label.classList.remove('border-jackoneal-yellow-500')
         }
       })
       filterProjects()
@@ -135,7 +135,7 @@ const allTags = [...new Set(projects.flatMap((project) => project.tags))].sort()
     tagCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener('change', (e) => {
         const label = (e.target as HTMLInputElement).nextElementSibling
-        label?.classList.toggle('bg-blue-500', (e.target as HTMLInputElement).checked)
+        label?.classList.toggle('bg-jackoneal-yellow-500', (e.target as HTMLInputElement).checked)
         label?.classList.toggle('text-white', (e.target as HTMLInputElement).checked)
         filterProjects()
       })
@@ -145,7 +145,7 @@ const allTags = [...new Set(projects.flatMap((project) => project.tags))].sort()
 
 <style>
   .tag-checkbox:checked + .tag-label {
-    @apply bg-blue-500 text-white border-blue-500;
+    @apply bg-jackoneal-yellow-500 text-white border-jackoneal-yellow-500;
   }
 
   /* Ensure project wrappers maintain grid layout */
