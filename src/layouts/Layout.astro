@@ -3,12 +3,10 @@ import '@fontsource-variable/inter';
 import '@fontsource/source-sans-pro';
 
 interface Props {
-  title: string;
   description?: string;
 }
 
 const { 
-  title, 
   description = "I am a mechanical engineering student that loves to build things."
 } = Astro.props;
 ---
@@ -19,9 +17,9 @@ const {
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/JackLogo.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>Jack O'Neal</title>
   </head>
   <body class="bg-apple-gray-50 text-apple-gray-500">
     <slot />
