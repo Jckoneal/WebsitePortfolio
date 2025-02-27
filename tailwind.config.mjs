@@ -21,6 +21,13 @@ export default {
           300: '#fcbd2c',
           400: '#FCB615',
           500: '#FFBE26',
+        },'jackoneal-red': {
+          50: '#fdda8a',
+          100: '#fccb5b',
+          200: '#fcc443',
+          300: '#fcbd2c',
+          400: '#C44129',
+          500: '#FFBE26',
         },
       },
       animation: {

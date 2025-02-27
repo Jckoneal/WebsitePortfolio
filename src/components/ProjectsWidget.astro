@@ -16,7 +16,7 @@ const featuredProjects: Project[] = projects;
     {featuredProjects.map((project) => (
       <a 
         href={project.demoUrl}
-        class="block bg-gradient-to-br from-jackoneal-yellow-50 to-white p-4 sm:p-6 rounded-2xl hover:shadow-lg transition-all duration-300"
+        class="block bg-gradient-to-br from-jackoneal-yellow-400 to-jackoneal-yellow-50 p-4 sm:p-6 rounded-2xl hover:shadow-lg transition-all duration-300"
       >
         <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
           <img
@@ -29,7 +29,7 @@ const featuredProjects: Project[] = projects;
             <p class="text-jackoneal-yellow-600 mb-3">{project.description}</p>
             <div class="flex flex-wrap gap-2">
               {project.tags.map((tech) => (
-                <span class="px-3 py-1 bg-jackoneal-yellow-100 text-jackoneal-yellow-600 rounded-full text-sm">
+                <span class="px-3 py-1 bg-white text-jackoneal-yellow-600 rounded-full text-sm">
                   {tech}
                 </span>
               ))}
