@@ -3,8 +3,8 @@ import type { Project } from "../types/project";
 export const projects: Project[] = [
   {
       id: 1,
-      title: "AI Chat Application",
-      description: "Real-time chat application with AI-powered responses. Utilizes OpenAI's GPT for intelligent conversations and features a modern, intuitive interface.",
+      title: "CAD Skateboard tutorial",
+      description: "A tutorial on how to design a skateboard in CAD software. This tutorial covers the basics of CAD design and how to create a 3D model of a skateboard.",
       image: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=800&h=400&fit=crop",
       tags: ["React", "Node.js", "OpenAI", "WebSocket"],
       demoUrl: "https://chat.example.com",
