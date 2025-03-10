@@ -66,6 +66,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               View Code
             </a>
           )}
+          {project.blogUrl && (
+            <a
+              href={project.blogUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center px-4 py-2 border border-jackoneal-yellow-600 text-jackoneal-yellow-600 rounded-xl hover:bg-jackoneal-yellow-50 transition-colors"
+            >
+              View Blog
+            </a>
+          )}
         </div>
       </div>
     </div>

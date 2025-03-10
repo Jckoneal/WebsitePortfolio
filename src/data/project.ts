@@ -9,6 +9,7 @@ export const projects: Project[] = [
       tags: ["React", "Node.js", "OpenAI", "WebSocket"],
       demoUrl: "https://chat.example.com",
       githubUrl: "https://github.com/example/ai-chat",
+      blogUrl: "https://www.example.com/blog/ai-chat",
       featured: true
     },
     {
@@ -19,6 +20,7 @@ export const projects: Project[] = [
       tags: ["Astro", "React", "TailwindCSS"],
       demoUrl: "https://portfolio.example.com",
       githubUrl: "https://github.com/example/portfolio",
+      blogUrl: "https://www.example.com/blog/ai-chat",
       featured: false
     }
 ];

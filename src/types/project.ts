@@ -6,5 +6,6 @@ export interface Project {
   tags: string[];
   demoUrl?: string;
   githubUrl?: string;
+  blogUrl?: string;
   featured?: boolean;
 }

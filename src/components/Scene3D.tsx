@@ -59,6 +59,22 @@ const Scene3D = () => {
       
       window.addEventListener('scroll', handleScroll);
     });
+    const rocketLoader = new GLTFLoader();
+    rocketLoader.load('./Dove-v2.glb', (gltf) => {
+      const rocket = gltf.scene;
+      rocket.position.set(6, -10, -10); // Initial position of the rocket
+      rocket.scale.set(.5, .5, .5);
+      rocket.rotation.set(Math.PI/2, Math.PI, 0);
+      sceneRef.current?.add(rocket);
+
+      // Animate the rocket on scroll
+      const handleRocketScroll = () => {
+        const scrollY = window.scrollY;
+        rocket.position.y = -10 + scrollY * 0.05; // Adjust the multiplier as needed
+      };
+
+      window.addEventListener('scroll', handleRocketScroll);
+    });
   
     // const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
     // const sphereMaterial = new THREE.MeshPhongMaterial({
