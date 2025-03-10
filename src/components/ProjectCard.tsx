@@ -51,9 +51,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center px-4 py-2 bg-jackoneal-yellow-600 text-white rounded-xl hover:bg-jackoneal-yellow-700 transition-colors"
+              className="flex-1 text-center px-4 py-2 border border-jackoneal-yellow-600 text-jackoneal-yellow-600 rounded-xl hover:bg-jackoneal-yellow-700 transition-colors"
             >
-              Live Demo
+              Demo
             </a>
           )}
           {project.githubUrl && (
