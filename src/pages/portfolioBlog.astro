@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Portfolio Blog" description="How I built my portfolio website.">
+  <section class="header">
+    <a href="/" class="inline-flex items-center text-jackoneal-yellow-600 hover:text-jackoneal-yellow-800 mb-4 py-2 px-4 rounded-lg transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+      </svg>
+      Back to Home
+    </a>
+    <h1 class="text-6xl font-bold text-jackoneal-yellow-900 mb-4 text-center">Portfolio Blog</h1>
+    <p class="text-center text-jackoneal-yellow-600 max-w-2xl mx-auto">
+      A behind-the-scenes look at how I built my portfolio website.
+    </p>
+    <br />
+    <section class="py-2 px-2">
+      <div class="container mx-auto max-w-8xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <section>
+            <section class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+              <h2 class="text-2xl font-bold text-jackoneal-yellow-900">Design Inspiration</h2>
+              <p>
+                The design of this website was inspired by modern, minimalistic portfolios. I wanted to create a clean and professional look while showcasing my engineering projects and skills. I used tools like Figma to sketch out the layout and color schemes before diving into development.
+              </p>
+            </section>
+            <br />
+            <section class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+              <h2 class="text-2xl font-bold text-jackoneal-yellow-900">Tech Stack</h2>
+              <p>
+                This website is built using <strong>Astro</strong>, a modern static site generator that allows me to use React components where needed while keeping the site fast and lightweight. For styling, I used <strong>Tailwind CSS</strong>, which made it easy to create a responsive and visually appealing design.
+              </p>
+            </section>
+            <br />
+            <section class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+              <h2 class="text-2xl font-bold text-jackoneal-yellow-900">Challenges</h2>
+              <p>
+                One of the biggest challenges was integrating 3D models using <strong>Three.js</strong>. I had to ensure that the models loaded correctly and performed well on different devices. Debugging issues with server-side rendering (SSR) in Astro was another learning experience, especially when working with browser-specific APIs like <code>window</code> and <code>document</code>.
+              </p>
+            </section>
+            <br />
+            <section class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+              <h2 class="text-2xl font-bold text-jackoneal-yellow-900">Future Improvements</h2>
+              <p>
+                In the future, I plan to add more interactive elements, such as animations and more blogs where I can share my engineering projects in detail. I also want to optimize the site further for performance and accessibility.
+              </p>
+            </section>
+          </section>
+          <canvas id="bg"></canvas>
+        </div>
+      </div>
+    </section>
+  </section>
+</Layout>

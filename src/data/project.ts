@@ -20,7 +20,7 @@ export const projects: Project[] = [
       tags: ["Astro", "React", "TailwindCSS"],
       demoUrl: "https://portfolio.example.com",
       githubUrl: "https://github.com/example/portfolio",
-      blogUrl: "https://www.example.com/blog/ai-chat",
+      blogUrl: "/portfolioBlog",
       featured: false
     }
 ];
