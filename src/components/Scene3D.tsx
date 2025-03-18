@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { gsap } from 'gsap';
-import { GLTFLoader } from 'three/examples/jsm/Addons.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-
+const offset = 0;
 
 const planeInitX = -25;
 const planeInitY = -2.6;
@@ -54,7 +54,12 @@ const Scene3D = () => {
         plane.position.x = planeInitX + scrollY * 0.07; // Adjust the multiplier as needed
         plane.position.y = planeInitY + scrollY * -0.002;
         plane.position.z = planeInitZ + scrollY * 0.02; // Adjust the multiplier as needed
-
+        jack.rotation.x = scrollY * 0.006;
+        jack.rotation.z = scrollY * 0.0003;
+        jack.rotation.y = scrollY * 0.005;
+        jack.position.x = scrollY * 0.03-8;
+        jack.position.z = scrollY * 0.01-10;
+        jack.position.y = scrollY * 0.01+4;
       };
       
       window.addEventListener('scroll', handleScroll);
@@ -103,6 +108,45 @@ const Scene3D = () => {
     //     ease: "sine.inOut",
     //   });
     // }
+    // Add a textured cube
+    const textureLoader = new THREE.TextureLoader();
+    const jackTextures = [
+      textureLoader.load('./images/Jack2.png'),
+      textureLoader.load('./images/Jack5.png'),
+      textureLoader.load('./images/Jack.jpg'),
+      textureLoader.load('./images/Jack6.JPG'),
+      textureLoader.load('./images/Jack4.png'),
+      textureLoader.load('./images/Jack3.png'),
+    ];
+    const jack = new THREE.Mesh(
+      new THREE.BoxGeometry(3, 3, 3),
+      jackTextures.map((texture) => new THREE.MeshBasicMaterial({ map: texture }))
+    );
+    jack.position.set(-8, 4, -10);
+    sceneRef.current?.add(jack);
+
+    // Load PilotV3 model
+    const pilotLoader = new GLTFLoader();
+    pilotLoader.load('./3d/PilotV3.glb', (gltf) => {
+      const pilot = gltf.scene;
+      pilot.position.set(10, -5, -10); // Initial position of the pilot
+      pilot.scale.set(.1, .1, .1); // Adjust scale as needed
+      sceneRef.current?.add(pilot);
+      pilot.rotation.x = 3.14/5 ;
+
+      // Animate the pilot on scroll
+      const handlePilotScroll = () => {
+        const scrollY = window.scrollY;
+        pilot.rotation.y = scrollY * 0.01; // Rotate the pilot
+        pilot.rotation.x = 3.14/5 + scrollY * 0.0001;
+        pilot.rotation.z = scrollY * 0.002;
+        pilot.position.y = -5 + scrollY * 0.02; // Move the pilot up/down
+        pilot.position.x = 10+ scrollY * 0.01; // Move the pilot left/right
+         // Move the pilot left/right
+      };
+
+      window.addEventListener('scroll', handlePilotScroll);
+    });
 
     // Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -117,7 +161,7 @@ const Scene3D = () => {
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
-      
+
       if (sceneRef.current && cameraRef.current && rendererRef.current) {
         rendererRef.current.render(sceneRef.current, cameraRef.current);
       }

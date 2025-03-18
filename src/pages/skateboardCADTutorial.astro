@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro'
+import '../components/SkateboardBlog.jsx'
+---
+
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/engineering-website-astro//assets/JackLogo.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Jack O'Neal | CAD Tutorial</title>
+	</head>
+	<body class="bg-apple-gray-50 text-apple-gray-500">
+        
+		  <section class="header">
+            <a href="/" class="inline-flex items-center text-jackoneal-yellow-600 hover:text-jackoneal-yellow-800 mb-4 py-2 px-4 rounded-lg transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                </svg>
+                Back to Home
+            </a>
+            <h1 class="text-6xl font-bold text-jackoneal-yellow-900 mb-4 text-center">CAD Tutorial</h1>
+            <p class="text-center text-jackoneal-yellow-600 max-w-2xl mx-auto">
+                In the CAD unit, I designed a skateboard using Onshape.
+            </p>
+            <br/>
+            <section class="py-2 px-2">
+                <div class="container mx-auto max-w-8xl">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <section class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+                    <h2 class="text-2xl font-bold text-jackoneal-yellow-900">The Deck</h2>
+                    <p>
+                    I began by creating a fully constrained sketch for the deck using the center rectangle and circle tools. With the completed sketch, I extruded it to a 10 millimeter thickness to form the base of the skateboard. To connect the trucks later, I created bolt holes utilizing Onshape's hole tool. Initially, I considered adding the bolt holes through sketches, but I learned that Onshape's hole tool is simpler, especially for tolerance management. Finally, I applied fillets to the edges of the deck to achieve the rounded profile typical of skateboards.
+                    </p>
+                    </section>
+                    <section/>
+                    <section class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+                    <h2 class="text-2xl font-bold text-jackoneal-yellow-900">The Trucks</h2>
+                    <p>
+                    Designing the trucks was particularly interesting because it required working with parts that were initially suspended in air before connecting them with proper constraints. One key takeaway was understanding how to reuse sketches with the use tool, which allowed me to reference existing sketches without the need to recreate constraints. This made it much easier. I also assisted Yannick with troubleshooting a constraint issue—his sketch had incorrect references due to a misclick, which caused conflicting constraints. Fixing this required identifying the incorrect constraint and constraining it.
+                    </p>
+                    </section>
+                    <section/>
+                    <section class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+                    <h2 class="text-2xl font-bold text-jackoneal-yellow-900">Wheels and Bearings</h2>
+                    <p>
+                        For the wheels, I used the revolve tool to create the wheel. Once the wheel shape was complete, I incorporated the bearing by referencing key dimensions using the use tool, ensuring accurate fitment within the wheel assembly. Then I added materials to the wheel and bearing so that I can find the weight of the objects.
+                    </p>
+                    </section>
+                    <section/>
+                    <section class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+                    <h2 class="text-2xl font-bold text-jackoneal-yellow-900">Assembly</h2>
+                    <p>
+                        During the assembly process, I inserted bearings on both sides of each wheel to ensure smooth rotation. To streamline the assembly of repeated components, I used the replicate tool, which is particularly useful for repetitive tasks like adding bearings to each wheel or attaching wheels to the trucks. The replicate tool saved me time, making it way faster than manually going through every assembly step for identical components.
+                    </p>
+                    </section>
+            </section>
+		</section>
+	  </body>
+</html>

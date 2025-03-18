@@ -9,7 +9,7 @@ export const projects: Project[] = [
       tags: ["OnShape", "CAD", "Tutorial"],
       demoUrl: "https://chat.example.com",
       githubUrl: "https://github.com/example/ai-chat",
-      blogUrl: "https://www.example.com/blog/ai-chat",
+      blogUrl: "/skateboardCADTutorial",
       featured: true
     },
     {
